@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IFE task 32</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<aside id="form_data_set">
+    <form id="data_create">
+        <fieldset class="input" id="type_box">
+            <legend>类型</legend>
+
+            <input checked name="data_type" id="input" type="radio">
+            <label for="input">输入框</label>
+
+            <input name="data_type" id="radio" type="radio">
+            <label for="radio">单选框</label>
+
+            <input name="data_type" id="checkbox" type="radio">
+            <label for="checkbox">多选框</label>
+
+            <input name="data_type" id="select" type="radio">
+            <label for="select">下拉框</label>
+
+            <input name="data_type" id="textarea" type="radio">
+            <label for="textarea">文本域</label>
+        </fieldset>
+        <fieldset class="necessary" id="basic_box">
+            <legend>配置</legend>
+
+            <label>名称：</label><input id="lable_box" type="text" value="姓名">
+
+            <input name="data_need" id="necessary" checked type="radio">
+            <label for="necessary">必填</label>
+
+            <input name="data_need" id="unnecessary" type="radio">
+            <label for="unnecessary">选填</label>
+
+            <label>样式</label>
+            <select id="select_box">
+                <option>样式一</option>
+                <option>样式二</option>
+            </select>
+
+        </fieldset>
+        <fieldset class="text" id="rule_input">
+            <legend>规则</legend>
+
+            <input checked name="data_rule" id="text" type="radio">
+            <label for="text">文字</label>
+
+            <input name="data_rule" id="number" type="radio">
+            <label for="number">数字</label>
+
+            <input name="data_rule" id="email" type="radio">
+            <label for="email">邮箱</label>
+
+            <input name="data_rule" id="phone" type="radio">
+            <label for="phone">电话号码</label>
+
+            <input name="data_rule" id="password" type="radio">
+            <label for="password">密码</label>
+        </fieldset>
+        <fieldset id="box_item">
+            <legend>选项</legend>
+
+            <input id="box_item_input" placeholder="可用空格，逗号，回车来分隔选项" />
+            <span id="box_item_show"></span>
+        </fieldset>
+        <fieldset id="length_control">
+            <legend>长度限制</legend>
+
+            <label>字符范围：</label><input id="min_length" type="number" min="0" value="4">
+            <span>--</span>
+            <input id="max_length" type="number" min="1" value="16">
+        </fieldset>
+        <button id="btn_add" type="button">add</button>
+    </form>
+</aside>
+<div id="form_box">
+    <h1 id="title">表单展示区</h1>
+    <form id="result" class="style1">
+        <button type="button" id="submit_form">提交</button>
+        <input type="text" class="hide">
+    </form>
+</div>
+
+<script src="js/showTagModule.js"></script>
+<script src="js/formModule.js"></script>
+<script src="js/dataProductModule.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

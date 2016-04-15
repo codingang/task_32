@@ -1,0 +1,182 @@
+#data_create fieldset:nth-of-type(n+3) {
+    display: none;
+}
+
+/*    根据类型的className来显示对于的模块表单    */
+#data_create .select~#box_item,
+#data_create .checkbox~#box_item,
+#data_create .radio~#box_item,
+#data_create .textarea~#length_control,
+#data_create .input~.password~#length_control,
+#data_create .input~.text~#length_control,
+#data_create .input~#rule_input {
+    display: block;
+}
+
+/*   设置的表单的样式     */
+#form_data_set {
+    width: 300px;
+    float: left;
+}
+#form_data_set fieldset {
+    margin-top: 20px;
+}
+#form_data_set label {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 14px;
+    margin-right: 8px;
+}
+#form_data_set #lable_box {
+    width: 200px;
+}
+#rule_input label,
+#type_box label {
+    width: 64px;
+    margin: 0;
+}
+#length_control input {
+    width: 20%;
+}
+#btn_add {
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(59,153,252);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/*    展示的表单的样式     */
+
+#form_box {
+    margin: 0 40px 0 340px ;
+    min-width: 600px;
+    padding: 0 0 20px 0;
+    border: 1px solid #000;
+    border-radius: 10px;
+}
+#title {
+    text-align: center;
+    color: rgb(59,153,252);
+}
+#result {
+    width: 400px;
+    margin: 20px auto;
+    position: relative;
+}
+#result .radio_box input {
+    width: auto;
+    height: auto;
+    text-align: left;
+}
+#result .radio_box label {
+    display: inline-block;
+    position: static;
+    width: auto;
+    margin-right: 10px;
+}
+#result input {
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: 1px solid rgb(199,199,199);
+    border-radius: 8px;
+}
+#result .radio_box label:first-child,
+#result label {
+    display: block;
+    text-align: right;
+    position: absolute;
+    width: 300px;
+    left: -320px;
+    margin-top: 4px;
+}
+#result.style2 div {
+    margin-top: 10px;
+    width: 300px;
+    position:relative;
+}
+#result.style2 span {
+    top:0;
+    display: block;
+    position: absolute;
+    text-align: left;
+    margin-top: 4px;
+    right:-350px;
+    width:320px;
+}
+#result span {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 8px;
+    font-size: 14px;
+    color: rgb(193,193,193);
+}
+#result .true {
+    color: rgb(39,198,82);
+    border-color: rgb(39,198,82);
+}
+#result .formNameLabel {
+    color: #000;
+}
+#result .error {
+    color: red;
+    border-color: red;
+}
+#result :first-child[id=submit_form] {
+    display: none;
+}
+#submit_form {
+    margin-top: 20px;
+    width: 80px;
+    height: 30px;
+    background-color: rgb(59,153,252);
+    color: #fff;
+    border: none;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+}
+
+/*     单选框 多选框 下拉框选项输入框的样式       */
+#box_item_show {
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin: 20px;
+}
+#box_item input {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+.item {
+    height: 20px;
+    background-color: red;
+    color: #fff;
+    margin: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.item>span {
+    transition: width 0.2s linear;
+    display: inline-block;
+    width: 0;
+    height: 16px;
+    overflow: hidden;
+}
+.item:hover>span {
+    transition: width 0.2s linear;
+    width: 64px;
+    height: 16px;
+}
+.item:hover {
+    background-color: blue;
+}
+.hide {
+    display: none;
+}
